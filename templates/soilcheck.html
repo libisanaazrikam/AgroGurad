@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soil Check - Agro Guard</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='soilcheck.css') }}"
+    />
+  </head>
+  <body>
+    <div class="logo">
+      <img
+        src="{{ url_for('static', filename='images/logo.png') }}"
+        alt="Agro Guard Logo"
+      />
+    </div>
+
+    <div class="container">
+      <h1 class="title">Soil Check</h1>
+
+      <div class="image-section">
+        <img
+          src="{{ url_for('static', filename='images/soilcheck.jpg') }}"
+          alt="Soil sample"
+        />
+      </div>
+
+      <div class="instructions">
+        <p>
+          <strong>Collect Soil</strong><br />Take samples from 3–5 spots, 6
+          inches deep. Mix and remove stones or roots.
+        </p>
+        <p>
+          <strong>Moisten Lightly</strong><br />Add a little water—just damp,
+          not muddy.
+        </p>
+        <p>
+          <strong>Power On & Insert Sensor</strong><br />Turn on Agro Guard and
+          place the sensor into the soil mix.
+        </p>
+      </div>
+
+        <a href="/check">
+          <button class="check-btn">Check</button>
+        </a>
+    </div>
+  </body>
+</html>

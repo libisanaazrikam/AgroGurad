@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agro Guard - Forgot password</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='fg.css')}}" />
+  </head>
+  <body>
+    <div class="login-page">
+      <div class="logo-wrapper">
+        <img
+          src="{{url_for('static',filename='images/logo.png')}}"
+          alt="Agro Guard Logo"
+          class="logo"
+        />
+      </div>
+
+      <!-- ✅ Add form with POST method -->
+      <div class="login-form">
+        <form method="POST" action="{{ url_for('fg') }}">
+          <input
+            type="text"
+            name="username"
+            placeholder="User name"
+            class="input-field"
+            required
+          />
+          <input
+            type="password"
+            name="password"
+            placeholder="New Password"
+            class="input-field"
+            required
+          />
+          <input
+            type="password"
+            name="confirm"
+            placeholder="Confirm Password"
+            class="input-field"
+            required
+          />
+
+          <div class="button-wrapper">
+            <button class="btn" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

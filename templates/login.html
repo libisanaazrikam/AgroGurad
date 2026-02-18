@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agro Guard - Login</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='login.css')}}" />
+  </head>
+  <body>
+    <div class="login-page">
+      <div class="logo-wrapper">
+        <img
+          src="{{url_for('static',filename='images/logo.png')}}"
+          alt="Agro Guard Logo"
+          class="logo"
+        />
+      </div>
+      <div class="login-form">
+        <form method="POST" action="/login" autocomplete="off">
+          <h1>LOGIN</h1>
+          <input
+            type="text"
+            name="username"
+            placeholder="User name"
+            class="input-field"
+            required
+            autocomplete="off"
+          />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            class="input-field"
+            required
+            autocomplete="new-password"
+          />
+          <a href="{{ url_for('fg') }}" class="forgot">forgot password?</a>
+          <button class="btn" type="submit">Login</button>
+          <p>Doesn’t have Account? <a href="/signup">Sign Up</a></p>
+          <button class="google-btn" type="button">
+            <img
+              src="{{url_for('static',filename='images/google.jpg')}}"
+              alt="Google Icon"
+            />
+            Signup with Google
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

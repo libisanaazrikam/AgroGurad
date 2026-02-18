@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agro Guard - Home</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='main.css')}}" />
+  </head>
+  <body>
+    <div class="hero">
+      <header>
+        <img
+          src="{{url_for('static',filename='/images/logo.png')}}"
+          alt="Agro Guard Logo"
+          class="logo"
+        />
+        <div class="buttons">
+          <a href="{{ url_for('login') }}" class="btn">Login</a>
+          <a href="{{ url_for('signup') }}" class="btn">Sign Up</a>
+        </div>
+      </header>
+      <div class="content">
+        <h1>
+          JOIN US IN BUILDING<br /><span>A SUSTAINABLE AND GREEN FUTURE.</span>
+        </h1>
+        <p>We are serve as guard of the AgroWorld</p>
+      </div>
+    </div>
+  </body>
+</html>

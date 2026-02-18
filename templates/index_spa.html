@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroGuard - Smart Agriculture</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style_modern.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#home" class="logo">AgroGuard</a>
+        <ul class="nav-links">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#soilcheck">Soil Check</a></li>
+            <li><a href="#floodrecovery">Flood Recovery</a></li>
+            <li><a href="#cropsuggest">Crop Suggestion</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator">
+        <div class="dot active" data-target="#home"></div>
+        <div class="dot" data-target="#soilcheck"></div>
+        <div class="dot" data-target="#floodrecovery"></div>
+        <div class="dot" data-target="#cropsuggest"></div>
+        <div class="dot" data-target="#about"></div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="scroll-container">
+
+        <!-- Home Section -->
+        <section id="home">
+            <div class="glass-card">
+                <h1>Welcome to AgroGuard</h1>
+                <p>AI-Powered Smart Agriculture Solutions</p>
+                <button class="btn-primary"
+                    onclick="document.getElementById('soilcheck').scrollIntoView({behavior: 'smooth'})">Get
+                    Started</button>
+            </div>
+        </section>
+
+        <!-- Soil Check Section -->
+        <section id="soilcheck">
+            <div class="glass-card">
+                <h2><i class="fas fa-flask"></i> Soil Analysis</h2>
+                <p>Check your soil quality by entering N, P, K values.</p>
+                <form id="soilForm">
+                    <div class="form-group">
+                        <label>Nitrogen (N)</label>
+                        <input type="number" name="N" class="form-control" required step="0.01">
+                    </div>
+                    <div class="form-group">
+                        <label>Phosphorous (P)</label>
+                        <input type="number" name="P" class="form-control" required step="0.01">
+                    </div>
+                    <div class="form-group">
+                        <label>Potassium (K)</label>
+                        <input type="number" name="K" class="form-control" required step="0.01">
+                    </div>
+                    <button type="submit" class="btn-primary">Analyze Soil</button>
+                </form>
+                <div id="soilResult" class="result-card"></div>
+            </div>
+        </section>
+
+        <!-- Flood Recovery Section -->
+        <section id="floodrecovery" data-aos="fade-up">
+            <div class="glass-card">
+                <h2><i class="fas fa-water"></i> Flood Recovery Assistant</h2>
+                <p>Analyze flood impact and get AI-driven recovery plans.</p>
+                <form id="floodForm">
+                    <div class="form-group">
+                        <label>Describe the damage (optional):</label>
+                        <textarea name="description" class="form-control" rows="3"
+                            placeholder="e.g., Water stayed for 5 days..."></textarea>
+                    </div>
+                    <div class="checkbox-group">
+                        <label class="check-container">Leaves turned yellow
+                            <input type="checkbox" name="symptoms" value="yellow_leaves">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="check-container">Water stayed > 3 days
+                            <input type="checkbox" name="symptoms" value="water_logging">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="check-container">Roots damaged/black
+                            <input type="checkbox" name="symptoms" value="root_rot">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="check-container">Soil erosion visible
+                            <input type="checkbox" name="symptoms" value="soil_erosion">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="check-container">Crop growth stopped
+                            <input type="checkbox" name="symptoms" value="stunted_growth">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn-primary" style="background: #e74c3c;">Analyze Flood Damage</button>
+                    <!-- Trigger Modal logic in JS -->
+                </form>
+            </div>
+        </section>
+
+        <!-- Flood Result Modal -->
+        <div id="floodModal" class="modal">
+            <div class="modal-content glass-card">
+                <span class="close">&times;</span>
+                <h2>Analysis Result</h2>
+                <div id="loading" style="display:none; text-align: center;">
+                    <i class="fas fa-spinner fa-spin fa-3x"></i>
+                    <p>Analyzing soil and plant health...</p>
+                </div>
+                <div id="floodResult" style="display:none">
+                    <!-- Dynamic content filled by JS -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Crop Suggestion Section -->
+        <section id="cropsuggest">
+            <div class="glass-card">
+                <h2><i class="fas fa-seedling"></i> Crop Recommendation</h2>
+                <p>Find the best crop for your soil conditions using AI.</p>
+                <form id="cropForm">
+                    <div class="form-group">
+                        <label>Nitrogen (N)</label>
+                        <input type="number" name="N" class="form-control" required step="0.01">
+                    </div>
+                    <div class="form-group">
+                        <label>Phosphorous (P)</label>
+                        <input type="number" name="P" class="form-control" required step="0.01">
+                    </div>
+                    <div class="form-group">
+                        <label>Potassium (K)</label>
+                        <input type="number" name="K" class="form-control" required step="0.01">
+                    </div>
+                    <button type="submit" class="btn-primary">Get Recommendation</button>
+                </form>
+                <div id="cropResult" class="result-card"></div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="glass-card">
+                <h2>About Us</h2>
+                <p>AgroGuard is dedicated to empowering farmers with cutting-edge technology. Our mission is to
+                    integrate AI with traditional farming to maximize yield and sustainability.</p>
+                <p>&copy; 2024 AgroGuard Inc.</p>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+
+</html>

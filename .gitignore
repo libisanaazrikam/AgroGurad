@@ -1,0 +1,19 @@
+# Virtual environments
+.venv/
+venv_new/
+env/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Database
+database.db
+
+# Temp files
+tempCodeRunnerFile.py
+
+# IDE
+.vscode/
+.idea/

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agro Guard - Suggested Vegetables</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='suggesveg.css') }}"
+    />
+  </head>
+  <body>
+    <div class="page-container">
+      <div class="logo">
+        <img
+          src="{{ url_for('static', filename='images/logo.png') }}"
+          alt="Agro Guard Logo"
+        />
+      </div>
+
+      <div class="report-container">
+        <div class="report-card">
+          <p><strong>Nitrogen (N):</strong> <span>{{ N }}%</span></p>
+          <p><strong>Phosphorus (P):</strong> <span>{{ P }}%</span></p>
+          <p><strong>Potassium (K):</strong> <span>{{ K }}%</span></p>
+        </div>
+      </div>
+
+       <h2 class="suggested-title">Suggested Crops</h2>
+    <div class="vegetable-list">
+      {% for rec in recommendations %}
+        <div class="veg-card">
+          {% if rec.img %}
+            <img src="{{ url_for('static', filename='images/' + rec.img) }}" alt="{{ rec.name }}">
+          {% else %}
+            <div class="placeholder">No image</div>
+          {% endif %}
+          <p class="crop-name">{{ rec.name | capitalize }}</p>
+          <p class="prob">Confidence: {{ rec.prob }}%</p>
+        </div>
+      {% endfor %}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

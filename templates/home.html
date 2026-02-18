@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Agro Guard</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='home.css')}}" />
+  </head>
+  <body>
+    <header>
+      <img
+        src="{{url_for('static',filename='images/logo.png')}}"
+        alt="Agro Guard Logo"
+        class="logo"
+      />
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="{{ url_for('soilcheck') }}">Soil Check</a></li>
+          <li><a href="{{ url_for('floodrecov') }}">Flood Recovery</a></li>
+          <li><a href="{{ url_for('cropsugg')   }}">Crop Suggest</a></li>
+          <li><a href="{{ url_for('about')   }}">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="about">
+      <div class="about-card">
+        <h2>🌿 About Agro Guard</h2>
+        <p>
+          <strong>Agro Guard</strong> is a smart agricultural assistant built to
+          empower farmers with real-time insights about their soil, crop
+          selection, and disaster recovery. With our intelligent tools —
+          including soil nutrient detection, crop suggestions, flood recovery
+          guidance, and voice-assisted support — we help you make better
+          decisions for healthier crops and sustainable farming. Whether you're
+          checking your soil's NPK levels or seeking the best watering and
+          fertilizing methods for your plants, <strong>Agro Guard</strong> is
+          here to guide every step of your cultivation journey.
+        </p>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: url("../static/images/home.jpg") no-repeat center center/cover;
+  position: relative;
+}
+
+/* Logo Styling */
+.logo {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 50px;
+  height: auto;
+  background-color: white;
+  border-radius: 12px;
+  padding: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Report Styling */
+.report-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-top: -50px;
+
+}
+
+.report {
+  color: black;
+  font-size: 24px;
+  max-width: 500px;
+  width: 100%;
+}
+
+/*Button*/
+.predict-btn {
+  background: linear-gradient(to right,  #49b14e); /* Green gradient */
+  color: white;
+  font-size: 18px;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.predict-btn:hover {
+  background: linear-gradient(to right, #388E3C );
+  transform: scale(1.05);
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  font-weight: bold;
+  
+}
+
+.predict-btn,
+.next-btn {
+  background-color: #49b14e;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
+ 
+
+  
+}
+.next-btn:hover {
+  background: linear-gradient(to right, #388E3C, #cbdc48);
+  transform: scale(1.05);
+}
+
+.fer {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+.label {
+  text-transform: uppercase;
+  font-size: 26px;
+  letter-spacing: 1px;
+}
+
+.value {
+  font-size: 22px;
+  font-weight: normal;
+}
+
+
+.soil-results {
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+
+.soil-results h3 {
+  color: #2c6e49;
+  margin-bottom: 10px;
+}
+
+.soil-results .prediction {
+  color: #007bff;
+  font-weight: bold;
+}
+.button-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px; /* increase this number to move it more to the right */
+  margin-top: 28px;
+}
+
+
+
+.button-row {
+  display: flex;
+  justify-content: center; /* centers them horizontally */
+  align-items: center;
+  gap: 20px; /* space between the two buttons */
+  margin-top: 20px;
+}
+
+.predict-btn, .next-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 30px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.predict-btn:hover, .next-btn:hover {
+  background-color: #45a049;
+}

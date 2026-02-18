@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body, html {
+  height: 100%;
+}
+
+.login-page {
+  background: url('/static/images/main.jpg') no-repeat center center/cover;
+  height: 100vh;
+  position: relative; /* Important: So absolute children are positioned relative to this */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 250px;
+  padding-top: 95px;
+}
+
+.logo-wrapper {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  z-index: 10;
+}
+
+.logo {
+  width: 60px;
+  height: auto;
+  background-color: white;
+  border-radius: 12px;
+  padding: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  top: 0px;
+  left: 0px;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 12px;
+  padding: 5px;
+    
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+.login-form {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  padding: 30px 25px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  color: #000;
+  width: 320px;
+  margin-bottom:150px;
+}
+
+.login-form h1 {
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: 20px;
+  color: #333;
+  text-shadow: 1px 1px 2px #fff;
+}
+
+.input-field {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #333;
+  font-size: 16px;
+}
+
+.input-field::placeholder {
+  color: #999;
+}
+
+.forgot {
+  display: block;
+  margin: 10px 0;
+  font-size: 14px;
+  color: #000;
+  text-decoration: none;
+}
+
+.btn {
+  padding: 10px 25px;
+  border: none;
+  background-color: white;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.btn:hover {
+  background-color: #e0e0e0;
+}
+
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px auto 0;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: white;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  gap: 10px;
+}
+
+.google-btn img {
+  width: 20px;
+  height: 20px;
+}

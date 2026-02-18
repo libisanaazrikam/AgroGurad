@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flood Recovery - Agro Guard</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='floodrecov.css') }}"
+    />
+  </head>
+  <body>
+    <div class="logo">
+      <img src="{{ url_for('static', filename='images/logo.png') }}" />
+    </div>
+
+    <div class="container">
+      <h1 class="title">Flood Recovery</h1>
+
+      <div class="image-section">
+        <img src="{{ url_for('static', filename='images/floodrec.jpg') }}" />
+      </div>
+
+      <div class="instructions">
+        <p>
+          <strong>Collect Soil</strong><br />Take samples from 3–5 spots, 6
+          inches deep. Mix and remove stones or roots.
+        </p>
+        <p>
+          <strong>Moisten Lightly</strong><br />Add a little water—just damp,
+          not muddy.
+        </p>
+        <p>
+          <strong>Power On & Insert Sensor</strong><br />Turn on Agro Guard and
+          place the sensor into the soil mix.
+        </p>
+      </div>
+
+      <button class="check-btn">Recover</button>
+    </div>
+  </body>
+</html>

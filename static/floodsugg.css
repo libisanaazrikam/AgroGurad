@@ -1,0 +1,90 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('../images/home.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #111;
+}
+
+.page-container {
+  padding: 20px;
+}
+
+.logo {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 12px;
+  padding: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  margin-left: 5px;
+  margin-top: 5px;
+  
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+.analyze-card {
+  max-width: 700px;
+  margin: 150px auto;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 30px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.analyze-card h2 {
+  margin-bottom: 30px;
+  font-size: 26px;
+  text-align: left;
+}
+
+.info-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+  margin-left:150px;
+  font-size: 18px;
+}
+
+.issues-section {
+  font-size: 18px;
+  text-align: left;
+  display: inline-block;
+  margin-top: -20px;
+  margin-left: -130px;
+}
+
+.issues-section label {
+  display: block;
+  font-weight: bold;
+  margin-left: 100px;
+  
+}
+
+.analyze-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #fff;
+  color: #111;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.analyze-button:hover {
+  background-color: #e0e0e0;
+}

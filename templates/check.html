@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soil Nutrient Input</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='check.css') }}"
+    />
+  </head>
+  <body>
+    <!-- Logo -->
+    <div class="logo">
+      <img
+        src="{{ url_for('static', filename='images/logo.png') }}"
+        alt="Agro Guard Logo"
+      />
+    </div>
+
+    <!-- Input Form -->
+    <div class="report-container">
+      <form class="report" method="POST" action="/soilgrade">
+        <div class="fer">
+          <label class="label">Nitrogen (N):</label>
+          <input class="value" type="number" name="N" required />
+        </div>
+        <div class="fer">
+          <label class="label">Phosphorus (P):</label>
+          <input class="value" type="number" name="P" required />
+        </div>
+        <div class="fer">
+          <label class="label">Potassium (K):</label>
+          <input class="value" type="number" name="K" required />
+        </div>
+     <div class="button-row">
+  <form class="report" method="POST" action="/soilgrade">
+    <button class="predict-btn" type="submit">Analyse</button>
+  </form>
+
+  <form action="/cropsugg" method="POST">
+    <input type="hidden" name="N" value="{{ N }}" />
+    <input type="hidden" name="P" value="{{ P }}" />
+    <input type="hidden" name="K" value="{{ K }}" />
+    <button class="next-btn" type="submit">Next: Crop Suggestion</button>
+  </form>
+</div>
+
+      {% if prediction %}
+      <div class="soil-results">
+        <h3>Soil Quality Grades</h3>
+        <p><strong>Nitrogen (N):</strong> {{ N }} → {{ N_grade }}</p>
+        <p><strong>Phosphorus (P):</strong> {{ P }} → {{ P_grade }}</p>
+        <p><strong>Potassium (K):</strong> {{ K }} → {{ K_grade }}</p>
+      </div>
+      {% endif %}
+    </div>
+  </body>
+</html>

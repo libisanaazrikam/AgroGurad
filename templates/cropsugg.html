@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crop suggest - Agro Guard</title>
+  <link rel="stylesheet" href="{{url_for('static',filename='cropsugg.css')}}" />
+</head>
+
+<body>
+  <div class="logo">
+    <img src="{{url_for('static',filename='images/logo.png')}}" alt="Agro Guard Logo" />
+  </div>
+
+  <div class="container">
+    <h1 class="title">Crop suggest</h1>
+
+    <div class="image-section">
+      <img src="{{url_for('static',filename='images/cropsuggest.jpg')}}" alt="Soil Sample" />
+    </div>
+
+    <div class="instructions">
+      <p>
+        <strong>Collect Soil</strong><br />Take samples from 3–5 spots, 6
+        inches deep. Mix and remove stones or roots.
+      </p>
+      <p>
+        <strong>Moisten Lightly</strong><br />Add a little water—just damp,
+        not muddy.
+      </p>
+      <p>
+        <strong>Power On & Insert Sensor</strong><br />Turn on Agro Guard and
+        place the sensor into the soil mix.
+      </p>
+    </div>
+    <br />
+    <form action="/suggesveg" method="POST">
+      <input type="hidden" name="N" value="{{ N }}" />
+      <input type="hidden" name="P" value="{{ P }}" />
+      <input type="hidden" name="K" value="{{ K }}" />
+
+      <div style="margin-bottom: 20px;">
+        <label for="soil_type" style="font-weight: bold;">Select Soil Type:</label>
+        <select name="soil_type" id="soil_type" required
+          style="padding: 10px; width: 100%; border-radius: 5px; margin-top: 5px;">
+          <option value="Clay">Clay</option>
+          <option value="Loamy">Loamy</option>
+          <option value="Silt">Silt</option>
+          <option value="Sandy">Sandy</option>
+          <option value="Peaty">Peaty</option>
+          <option value="Saline">Saline</option>
+        </select>
+      </div>
+
+
+      <button class="check-btn" type="submit">Plant</button>
+    </form>
+  </div>
+</body>
+
+</html>

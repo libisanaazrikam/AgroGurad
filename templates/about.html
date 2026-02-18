@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Agro Guard</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='about.css') }}"
+    />
+  </head>
+  <body>
+    <body>
+  <div class="logo">
+    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Agro Guard Logo" />
+  </div>
+
+    <div class="contact-container">
+      <div class="contact-box">
+        <div class="form-section">
+          <div class="form-header">
+            <h2>GET IN TOUCH WITH US</h2>
+          </div>
+          <form>
+            <input type="text" placeholder="FIRST NAME" required />
+            <input type="text" placeholder="LAST NAME" required />
+            <input type="email" placeholder="E-MAIL" required />
+            <textarea
+              placeholder="TYPE YOUR MESSAGE"
+              rows="5"
+              required
+            ></textarea>
+            <button type="submit" >SEND</button>
+          </form>
+        </div>
+        <div class="info-section">
+          <h1>Contact us</h1>
+          <div class="info">
+            <p><strong>Phone</strong><br />+1 667 55 345 66</p>
+            <p><strong>E-mail</strong><br />agroprof@gmail.com</p>
+            <p><strong>Location</strong><br />UoV, Vavuniya, Srilanka</p>
+          </div>
+          <div class="map">
+            <img
+              src="{{ url_for('static', filename='images/map.png') }}"
+              alt="Map Location"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
